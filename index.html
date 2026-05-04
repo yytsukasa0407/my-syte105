@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相続税専門 山中税理士法人 | 初回無料相談</title>
+    <!-- Google Fonts: Noto Sans JP -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Noto Sans JP"', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            blue: '#1E3A8A', // Trustworthy Navy
+                            light: '#EFF6FF',
+                            accent: '#D97706', // Warm Amber/Gold
+                            hover: '#B45309'
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <style>
+        /* Smooth scrolling */
+        html { scroll-behavior: smooth; }
+        /* Hero background gradient overlay */
+        .hero-bg {
+            background-image: linear-gradient(rgba(30, 58, 138, 0.8), rgba(30, 58, 138, 0.9)), url('https://images.unsplash.com/photo-1556761175-5973dc0f32b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+        .text-shadow {
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 flex flex-col min-h-screen">
+
+    <!-- Header / Navigation -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="#" class="flex items-center gap-2 text-brand-blue hover:opacity-80 transition">
+                        <i data-lucide="landmark" class="h-8 w-8"></i>
+                        <div>
+                            <p class="text-xs font-bold tracking-widest text-gray-500">相続税専門</p>
+                            <h1 class="text-xl md:text-2xl font-bold">山中税理士法人</h1>
+                        </div>
+                    </a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <nav class="hidden md:flex space-x-8 items-center">
+                    <a href="#features" class="text-gray-600 hover:text-brand-blue font-medium transition">選ばれる理由</a>
+                    <a href="#services" class="text-gray-600 hover:text-brand-blue font-medium transition">サービス案内</a>
+                    <a href="#pricing" class="text-gray-600 hover:text-brand-blue font-medium transition">料金表</a>
+                    <a href="#flow" class="text-gray-600 hover:text-brand-blue font-medium transition">ご相談の流れ</a>
+                    <a href="#profile" class="text-gray-600 hover:text-brand-blue font-medium transition">代表挨拶</a>
+                    <div class="flex flex-col items-end">
+                        <span class="text-xs text-gray-500 font-bold"><i data-lucide="phone" class="inline w-3 h-3 mr-1"></i>070-6511-1948</span>
+                        <a href="#contact" class="bg-brand-accent hover:bg-brand-hover text-white px-5 py-2 rounded-full font-bold transition shadow-md">無料相談を予約する</a>
+                    </div>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-brand-blue focus:outline-none">
+                        <i data-lucide="menu" class="h-8 w-8"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="md:hidden hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#features" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">選ばれる理由</a>
+                <a href="#services" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">サービス案内</a>
+                <a href="#pricing" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">料金表</a>
+                <a href="#flow" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">ご相談の流れ</a>
+                <a href="#profile" class="block px-3 py-2 text-base font-medium text-gray-700 hover:text-brand-blue hover:bg-gray-50">代表挨拶</a>
+                <a href="#contact" class="block mt-4 px-3 py-3 text-center text-base font-bold text-white bg-brand-accent rounded-md">初回無料相談・お問い合わせ</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white py-20 md:py-32">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <span class="inline-block py-1 px-3 rounded-full bg-brand-accent text-white text-sm font-bold mb-6 tracking-wider">
+                相続税でお悩みの方へ
+            </span>
+            <h2 class="text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 text-shadow">
+                相続の不安を、<br class="md:hidden">確かな「安心」へ。
+            </h2>
+            <p class="text-lg md:text-xl mb-10 max-w-2xl text-gray-100 leading-relaxed text-shadow">
+                相続税申告・生前対策・事業承継など、相続に関するあらゆるお悩みを<br class="hidden md:block">
+                相続専門の税理士が親身にサポートいたします。まずは無料相談へ。
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
+                <a href="#contact" class="bg-brand-accent hover:bg-brand-hover text-white font-bold py-4 px-8 rounded-full shadow-lg transition transform hover:-translate-y-1 text-center text-lg flex items-center justify-center">
+                    <i data-lucide="calendar" class="w-5 h-5 mr-2"></i> 無料相談を予約する
+                </a>
+                <a href="tel:07065111948" class="bg-white text-brand-blue hover:bg-gray-100 font-bold py-4 px-8 rounded-full shadow-lg transition text-center text-lg flex items-center justify-center border border-transparent">
+                    <i data-lucide="phone-call" class="w-5 h-5 mr-2"></i> 070-6511-1948
+                </a>
+            </div>
+            <p class="mt-4 text-sm text-gray-200">【受付時間】平日 9:00〜18:00（土日祝は要予約）</p>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">REASONS</p>
+                <h3 class="text-3xl font-bold text-gray-900">山中税務会計事務所が<br class="md:hidden">選ばれる3つの理由</h3>
+                <div class="w-20 h-1 bg-brand-blue mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="text-center p-8 rounded-2xl bg-brand-light border border-blue-100 hover:shadow-lg transition">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-brand-blue">
+                        <i data-lucide="award" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">相続税「専門」の<br>圧倒的な実績とノウハウ</h4>
+                    <p class="text-gray-600 leading-relaxed text-left">
+                        一般的な税理士は年に1件ほどしか相続税申告を行わないと言われています。当事務所は相続に特化しており、豊富な申告実績に基づいた適正な財産評価で、税務調査リスクを最小限に抑えます。
+                    </p>
+                </div>
+                <!-- Feature 2 -->
+                <div class="text-center p-8 rounded-2xl bg-brand-light border border-blue-100 hover:shadow-lg transition">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-brand-blue">
+                        <i data-lucide="coins" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">追加料金なしの<br>明瞭な料金体系</h4>
+                    <p class="text-gray-600 leading-relaxed text-left">
+                        ご契約前に必ず詳細なお見積もりをご提示し、ご納得いただいてから業務を開始します。後から不透明な追加料金を請求することは一切ございませんので、安心してご依頼いただけます。
+                    </p>
+                </div>
+                <!-- Feature 3 -->
+                <div class="text-center p-8 rounded-2xl bg-brand-light border border-blue-100 hover:shadow-lg transition">
+                    <div class="bg-white w-20 h-20 rounded-full flex items-center justify-center mx-auto mb-6 shadow-md text-brand-blue">
+                        <i data-lucide="heart-handshake" class="w-10 h-10"></i>
+                    </div>
+                    <h4 class="text-xl font-bold mb-4">徹底したお客様寄り添い<br>分かりやすい説明</h4>
+                    <p class="text-gray-600 leading-relaxed text-left">
+                        専門用語を極力使わず、図解などを交えて誰にでも分かりやすくご説明いたします。ご家族の状況や想いを丁寧にヒアリングし、円満な相続となるよう親身にサポートします。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">SERVICES</p>
+                <h3 class="text-3xl font-bold text-gray-900">サービス案内</h3>
+                <div class="w-20 h-1 bg-brand-blue mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600 max-w-2xl mx-auto">事前の対策から発生後の申告まで、相続に関するあらゆる手続きをワンストップでサポートします。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=600&q=80" alt="相続税申告" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/eee/999?text=相続税申告'">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold mb-3 border-b-2 border-brand-accent inline-block pb-1 self-start">相続税申告</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">
+                            10ヶ月という短い期限内で、正確な財産評価と申告書作成を行います。特例（小規模宅地等の特例や配偶者控除など）を最大限に活用し、適正な納税額を算出します。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>財産目録の作成</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>土地の現地調査・適正評価</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>遺産分割協議書の作成サポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=600&q=80" alt="生前対策" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/eee/999?text=生前対策'">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold mb-3 border-b-2 border-brand-accent inline-block pb-1 self-start">生前対策・節税提案</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">
+                            元気なうちから始める対策が、将来の家族の笑顔を守ります。現状の相続税額をシミュレーションし、お客様の資産状況に合わせた最適な節税対策をご提案します。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>生前贈与の活用（暦年贈与・精算課税）</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>生命保険の活用アドバイス</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>遺言書の作成サポート</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition flex flex-col">
+                    <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=600&q=80" alt="相続手続き" class="w-full h-48 object-cover" onerror="this.src='https://placehold.co/600x400/eee/999?text=相続手続き'">
+                    <div class="p-8 flex-grow flex flex-col">
+                        <h4 class="text-xl font-bold mb-3 border-b-2 border-brand-accent inline-block pb-1 self-start">相続手続き・名義変更</h4>
+                        <p class="text-gray-600 mb-6 flex-grow">
+                            預貯金の解約や不動産の名義変更など、煩雑で手間のかかる手続きを代行・サポート。司法書士や弁護士と連携し、窓口一つですべて完了する体制を整えています。
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2 mb-6">
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>戸籍謄本等の収集代行</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>金融機関の解約・名義変更手続き</li>
+                            <li class="flex items-start"><i data-lucide="check-circle-2" class="w-4 h-4 text-brand-blue mr-2 mt-0.5"></i>不動産登記変更（提携司法書士）</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div class="text-center mb-16">
+                <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">PRICING</p>
+                <h3 class="text-3xl font-bold text-gray-900">料金表</h3>
+                <div class="w-20 h-1 bg-brand-blue mx-auto mt-4"></div>
+                <p class="mt-6 text-gray-600">相続財産額に応じた、明瞭でわかりやすい料金体系となっております。</p>
+            </div>
+
+            <div class="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
+                <table class="w-full text-left border-collapse">
+                    <thead>
+                        <tr class="bg-brand-blue text-white">
+                            <th class="py-4 px-6 font-bold border-b border-brand-blue text-center w-1/2">相続財産額</th>
+                            <th class="py-4 px-6 font-bold border-b border-brand-blue text-center w-1/2">基本報酬（税込）</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-gray-700 divide-y divide-gray-200">
+                        <tr class="hover:bg-brand-light transition">
+                            <td class="py-4 px-6 text-center">5,000千円 以下</td>
+                            <td class="py-4 px-6 text-center font-bold text-lg">150千円</td>
+                        </tr>
+                        <tr class="hover:bg-brand-light transition">
+                            <td class="py-4 px-6 text-center">8,000千円 以下</td>
+                            <td class="py-4 px-6 text-center font-bold text-lg">350千円</td>
+                        </tr>
+                        <tr class="hover:bg-brand-light transition">
+                            <td class="py-4 px-6 text-center">10,000千円 以下</td>
+                            <td class="py-4 px-6 text-center font-bold text-lg">450千円</td>
+                        </tr>
+                        <tr class="hover:bg-brand-light transition">
+                            <td class="py-4 px-6 text-center">20,000千円 以下</td>
+                            <td class="py-4 px-6 text-center font-bold text-lg">850千円</td>
+                        </tr>
+                        <tr class="hover:bg-brand-light transition">
+                            <td class="py-4 px-6 text-center">20,000千円 超</td>
+                            <td class="py-4 px-6 text-center font-bold text-lg">ご相談</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Profile Section -->
+    <section id="profile" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-brand-light rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row items-center gap-12 shadow-sm border border-blue-50">
+                <div class="w-full md:w-1/3 flex justify-center">
+                    <!-- Placeholder for portrait photo -->
+                    <div class="w-64 h-64 md:w-80 md:h-80 rounded-full border-4 border-white shadow-xl overflow-hidden bg-gray-200 flex items-center justify-center">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=400&h=400&q=80" alt="代表税理士 山中 司" class="w-full h-full object-cover" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <i data-lucide="user" class="w-24 h-24 text-gray-400 hidden"></i>
+                    </div>
+                </div>
+                <div class="w-full md:w-2/3">
+                    <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">MESSAGE</p>
+                    <h3 class="text-3xl font-bold text-gray-900 mb-6">「残されたご家族が、争いなく<br class="hidden sm:block">笑顔で過ごせる未来のために」</h3>
+                    <div class="space-y-4 text-gray-700 leading-relaxed mb-8">
+                        <p>
+                            はじめまして。山中税理士法人、代表税理士の山中 司と申します。<br>
+                            相続は、人生で何度も経験するものではありません。大切なご家族を亡くされた悲しみの中で、複雑な手続きや税金の申告を行わなければならないご遺族の負担は計り知れません。
+                        </p>
+                        <p>
+                            私たちは単に税金の計算をするだけでなく、「お客様の不安を取り除くこと」を第一の使命としています。難解な専門用語は使わず、親身に寄り添い、円滑な相続手続きを実現します。<br>
+                            どんな些細なことでも構いません。まずは一度、無料相談をご利用ください。
+                        </p>
+                    </div>
+                    <div class="inline-block border-l-4 border-brand-blue pl-4">
+                        <p class="text-sm text-gray-500 mb-1">代表税理士</p>
+                        <p class="text-2xl font-bold text-gray-900 tracking-wider">山中 司 <span class="text-sm font-normal text-gray-600 ml-2">Tsukasa Yamanaka</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Flow Section -->
+    <section id="flow" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">FLOW</p>
+                <h3 class="text-3xl font-bold text-gray-900">ご相談から申告までの流れ</h3>
+                <div class="w-20 h-1 bg-brand-blue mx-auto mt-4"></div>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="space-y-8 relative before:absolute before:inset-0 before:ml-5 before:-translate-x-px md:before:mx-auto md:before:translate-x-0 before:h-full before:w-0.5 before:bg-gradient-to-b before:from-transparent before:via-gray-300 before:to-transparent">
+                    
+                    <!-- Step 1 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">1</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2 text-brand-blue">お問い合わせ</h4>
+                            <p class="text-gray-600 text-sm">お電話または当サイトのお問い合わせフォームより、無料相談をご予約ください。土日祝日や夜間の面談も対応可能です。</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">2</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2 text-brand-blue">初回無料面談（約60分）</h4>
+                            <p class="text-gray-600 text-sm">現在の状況を丁寧にヒアリングいたします。相続税がかかるかどうかの簡易判定や、今後のスケジュールをお伝えします。</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">3</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2 text-brand-blue">お見積りのご提示・ご契約</h4>
+                            <p class="text-gray-600 text-sm">サポート内容と明確な料金をお見積りとしてご提示します。内容にご納得いただけましたら、正式にご契約となります。</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 4 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-blue text-white font-bold border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">4</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-xl shadow-md border border-gray-100">
+                            <h4 class="font-bold text-lg mb-2 text-brand-blue">財産評価・遺産分割協議書の作成</h4>
+                            <p class="text-gray-600 text-sm">必要書類の収集、財産の詳細な評価を実施します。その後、誰がどの財産を引き継ぐかの遺産分割協議書の作成をサポートします。</p>
+                        </div>
+                    </div>
+
+                    <!-- Step 5 -->
+                    <div class="relative flex items-center justify-between md:justify-normal md:odd:flex-row-reverse group is-active">
+                        <div class="flex items-center justify-center w-10 h-10 rounded-full bg-brand-accent text-white font-bold border-4 border-white shadow shrink-0 md:order-1 md:group-odd:-translate-x-1/2 md:group-even:translate-x-1/2 z-10">5</div>
+                        <div class="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 bg-white rounded-xl shadow-md border border-brand-accent border-opacity-30">
+                            <h4 class="font-bold text-lg mb-2 text-brand-accent">相続税の申告・納付</h4>
+                            <p class="text-gray-600 text-sm">作成した申告書をお客様にご確認いただいた後、税務署へ提出いたします。納付書の作成・納付手続きのご案内も行い、完了となります。</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
+            <div class="text-center mb-16">
+                <p class="text-brand-accent font-bold tracking-widest text-sm mb-2">FAQ</p>
+                <h3 class="text-3xl font-bold text-gray-900">よくあるご質問</h3>
+                <div class="w-20 h-1 bg-brand-blue mx-auto mt-4"></div>
+            </div>
+
+            <div class="space-y-4">
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 rounded-lg bg-gray-50">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">Q</div>
+                            <h4 class="text-lg font-bold text-gray-900 pt-1">初回の相談は本当に無料ですか？時間制限はありますか？</h4>
+                        </div>
+                        <div class="mt-4 pl-12 flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold">A</div>
+                            <p class="text-gray-600 pt-1">はい、初回のご相談は完全無料です。時間の目安は約60分とさせていただいておりますが、お客様のお悩みをしっかりとお聞きするため、多少延びる場合でも追加料金は発生しませんのでご安心ください。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 rounded-lg bg-gray-50">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">Q</div>
+                            <h4 class="text-lg font-bold text-gray-900 pt-1">平日は仕事で忙しいのですが、土日や夜間の相談は可能ですか？</h4>
+                        </div>
+                        <div class="mt-4 pl-12 flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold">A</div>
+                            <p class="text-gray-600 pt-1">はい、可能です。事前にお電話またはフォームよりご予約いただければ、土日祝日や平日の夜間18時以降でも柔軟に対応させていただきます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="border border-gray-200 rounded-lg bg-gray-50">
+                    <div class="p-6">
+                        <div class="flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-blue text-white rounded-full flex items-center justify-center font-bold">Q</div>
+                            <h4 class="text-lg font-bold text-gray-900 pt-1">自分が相続税の申告対象になるかどうかも分からないのですが…</h4>
+                        </div>
+                        <div class="mt-4 pl-12 flex items-start gap-4">
+                            <div class="flex-shrink-0 w-8 h-8 bg-brand-accent text-white rounded-full flex items-center justify-center font-bold">A</div>
+                            <p class="text-gray-600 pt-1">全く問題ありません。無料相談にて、大まかな財産の内訳をお伺いし、基礎控除額を上回る可能性があるかどうかの「簡易判定」を無料で行います。申告不要と分かった時点で終了となる場合も料金はいただきません。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-brand-blue text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+                <!-- Info -->
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">無料相談・お問い合わせ</h3>
+                    <p class="mb-8 text-blue-100 leading-relaxed">
+                        相続に関するお悩みやご不安、当事務所のサービスに関するご質問など、お気軽にお問い合わせください。専門の税理士が親切丁寧に対応いたします。
+                    </p>
+                    
+                    <div class="bg-white/10 rounded-xl p-8 mb-8 backdrop-blur-sm">
+                        <div class="flex items-center gap-4 mb-4">
+                            <i data-lucide="phone" class="w-8 h-8 text-brand-accent"></i>
+                            <div>
+                                <p class="text-sm text-blue-200">お電話でのご予約・ご相談</p>
+                                <p class="text-3xl font-bold tracking-wider text-white hover:text-brand-accent transition"><a href="tel:07065111948">070-6511-1948</a></p>
+                            </div>
+                        </div>
+                        <p class="text-sm text-blue-200 ml-12">受付時間：平日 9:00〜18:00（土日祝も対応可・要予約）</p>
+                    </div>
+
+                    <div class="space-y-4 text-blue-100">
+                        <div class="flex items-start gap-3">
+                            <i data-lucide="map-pin" class="w-5 h-5 flex-shrink-0 mt-1 text-brand-accent"></i>
+                            <p>〒167-0051<br>東京都杉並区荻窪5-17-11-319<br><span class="text-sm mt-1 inline-block">※各線「荻窪駅」すぐ</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="bg-white rounded-2xl p-8 text-gray-800 shadow-2xl">
+                    <h4 class="text-xl font-bold mb-6 text-center border-b pb-4">お問い合わせフォーム（24時間受付）</h4>
+                    <form id="contact-form" onsubmit="event.preventDefault(); submitForm();" class="space-y-4">
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">お名前 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                            <input type="text" id="name" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="山田 太郎">
+                        </div>
+                        <div>
+                            <label for="phone" class="block text-sm font-medium text-gray-700 mb-1">お電話番号 <span class="text-red-500 text-xs ml-1">必須</span></label>
+                            <input type="tel" id="phone" required class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="090-1234-5678">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">メールアドレス</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition" placeholder="taro@example.com">
+                        </div>
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">ご相談内容（簡潔で構いません）</label>
+                            <textarea id="message" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-brand-blue focus:border-brand-blue outline-none transition resize-none" placeholder="父が亡くなり、相続税の申告が必要か相談したいです。"></textarea>
+                        </div>
+                        <div class="pt-4">
+                            <button type="submit" class="w-full bg-brand-accent hover:bg-brand-hover text-white font-bold py-3 px-4 rounded-lg shadow transition flex justify-center items-center gap-2 text-lg">
+                                <i data-lucide="send" class="w-5 h-5"></i> 送信して無料相談を予約する
+                            </button>
+                            <p class="text-xs text-center text-gray-500 mt-4">送信いただいた個人情報は厳重に管理し、ご相談に関する目的以外には使用いたしません。</p>
+                        </div>
+                    </form>
+                    <!-- Success Message (Hidden initially) -->
+                    <div id="form-success" class="hidden text-center py-10">
+                        <i data-lucide="check-circle" class="w-16 h-16 text-green-500 mx-auto mb-4"></i>
+                        <h5 class="text-xl font-bold mb-2">送信が完了しました</h5>
+                        <p class="text-gray-600 text-sm">お問い合わせありがとうございます。<br>担当者より1〜2営業日以内にご連絡いたします。</p>
+                        <button onclick="resetForm()" class="mt-6 text-brand-blue underline text-sm">戻る</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center md:items-start border-b border-gray-800 pb-8 mb-8">
+                <div class="mb-8 md:mb-0 text-center md:text-left">
+                    <div class="flex items-center gap-2 justify-center md:justify-start text-white mb-4">
+                        <i data-lucide="landmark" class="h-6 w-6"></i>
+                        <h2 class="text-xl font-bold tracking-wider">山中税理士法人</h2>
+                    </div>
+                    <p class="text-sm">相続税特化のプロフェッショナルが、<br>あなたの家族の財産と未来を守ります。</p>
+                </div>
+                <div class="flex gap-8 text-sm">
+                    <ul class="space-y-2 text-center md:text-left">
+                        <li><a href="#" class="hover:text-white transition">ホーム</a></li>
+                        <li><a href="#features" class="hover:text-white transition">選ばれる理由</a></li>
+                        <li><a href="#services" class="hover:text-white transition">サービス案内</a></li>
+                        <li><a href="#pricing" class="hover:text-white transition">料金表</a></li>
+                    </ul>
+                    <ul class="space-y-2 text-center md:text-left">
+                        <li><a href="#profile" class="hover:text-white transition">代表挨拶</a></li>
+                        <li><a href="#flow" class="hover:text-white transition">ご相談の流れ</a></li>
+                        <li><a href="#contact" class="hover:text-white transition">お問い合わせ</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="flex flex-col md:flex-row justify-between items-center text-xs">
+                <p>&copy; 2026 Yamanaka Tax Accountant Corporation. All Rights Reserved.</p>
+                <div class="mt-4 md:mt-0 space-x-4">
+                    <a href="#" class="hover:text-white transition">プライバシーポリシー</a>
+                    <a href="#" class="hover:text-white transition">事務所概要</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when a link is clicked
+        const mobileLinks = menu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Mock Form Submission
+        function submitForm() {
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('form-success');
+            
+            // Simple validation visualization
+            const btn = form.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i> 送信中...';
+            lucide.createIcons();
+            
+            // Simulate API call delay
+            setTimeout(() => {
+                form.classList.add('hidden');
+                success.classList.remove('hidden');
+                btn.innerHTML = originalText;
+                lucide.createIcons();
+            }, 1000);
+        }
+
+        function resetForm() {
+            const form = document.getElementById('contact-form');
+            const success = document.getElementById('form-success');
+            form.reset();
+            success.classList.add('hidden');
+            form.classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
